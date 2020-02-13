@@ -1,0 +1,6 @@
+.userRepo ul.list-group {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap:0.5em;
+    grid-auto-flow: column;
+  }

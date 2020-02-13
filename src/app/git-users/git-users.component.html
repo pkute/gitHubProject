@@ -1,0 +1,15 @@
+<div class="userList bg-white col-md-12 col-lg-12 col-sm-12 p-0">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title text-center pb-3 text-secondary"><span class="d-inline-block mr-3"><i class="fa fa-user" aria-hidden="true"></i></span>USER LIST</h4>
+        <div class="search-user py-5 px-3">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchUser" autocomplete="off" placeholder="Serch User...">
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let user of gitUsers | filter:searchUser">
+            <a routerLink="/user-repositories" (click)="setGitUserName(user)" class="float-left">{{user.login}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
